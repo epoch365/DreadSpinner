@@ -24,9 +24,9 @@ The winning combos are:
 
 ## FAQ
 
-- Q; Can I make my own version from this? A: Sure, why would I stop you.
+- Q: Can I make my own version from this? A: Sure, why would I stop you.
 - Q: How does it work? A: Read the source code, there are comments.
 - Q: I have a suggestion? A: That's nice.
 - Q: The link's dead/something's not working. A: Ok, hopefully it'll get noticed and fixed.
-- Q; Fool! The whole thing is client side in JavaScript. I can modify the code for me to win! A: I have been bested. Congratulations hackerman on winning the internets.
+- Q: Fool! The whole thing is client side in JavaScript. I can modify the code for me to win! A: I have been bested. Congratulations hackerman on winning the internets.
 - Q: Why are am I still reading this? A: I don't know myself.
