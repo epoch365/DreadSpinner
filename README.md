@@ -30,3 +30,5 @@ The winning combos are:
 - Q: The link's dead/something's not working. A: Ok, hopefully it'll get noticed and fixed.
 - Q: Fool! The whole thing is client side in JavaScript. I can modify the code for me to win! A: I have been bested. Congratulations hackerman on winning the internets.
 - Q: Why are am I still reading this? A: I don't know myself.
+
+![Preview](https://i.imgur.com/mSHKVj9.gif "Preview")
