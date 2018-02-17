@@ -380,6 +380,4 @@ function startSpinner () {
             setTimeout(spinners[i].start, 250 + i * 500);
         }) ();
     }
-    
-    console.log(results);
 }
