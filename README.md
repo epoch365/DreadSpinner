@@ -16,7 +16,7 @@ Lose more money than you have to student loans in three easy steps.
 
 You can either download the repository and run it on your local machine in a web browser or use this [preview link](http://htmlpreview.github.io/?https://github.com/epoch365/DreadSpinner/blob/master/index.html) to use it on the web or view a gif of it [https://imgur.com/kBGrzeN](https://imgur.com/kBGrzeN).
 
-Or view the live but not always updated version at [dreadspinner.com](http://dreadspinner.com) (Why in the world am I actually paying to host this??)
+Or view the live but not always updated version at [dreadspinner.com](https://dreadspinner.com) (Why in the world am I actually paying to host this??).
 
 The winning combos are:
 
