@@ -31,6 +31,14 @@
     border-color: black;
     cursor: pointer;
 }
+#volumeIcon {
+    font-size: 30px;
+    min-width: 34px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-225px, -50%);
+}
 .betText {
     font-size: 30px;
     width: 160px;

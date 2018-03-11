@@ -4,6 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="DreadSpinner.css">
     <script src="DreadSpinner.js"></script>
     <title>Dread Spinner</title>
@@ -17,35 +18,36 @@
                 alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png">
         </a>
         <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="resultDiv" class="results">Welcome</div>
+            <div class="row">
+                <div class="col">
+                    <div id="resultDiv" class="results">Welcome</div>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col">
-            <canvas id="spinnerThreeAnimation" class="align-right"></canvas>
+            <div class="row">
+                <div class="col">
+                <canvas id="spinnerThreeAnimation" class="align-right"></canvas>
+                </div>
+                <div class="col">
+                <canvas id="spinnerTwoAnimation" class="align-center"></canvas>
+                </div>
+                <div class="col">
+                <canvas id="spinnerOneAnimation" class="align-left"></canvas>
+                </div>
             </div>
-            <div class="col">
-            <canvas id="spinnerTwoAnimation" class="align-center"></canvas>
-            </div>
-            <div class="col">
-            <canvas id="spinnerOneAnimation" class="align-left"></canvas>
-            </div>
-        </div>
 
-        <div class="row input-row">
-            <div class="col">
-                <div class="betText">Bet: <input id="betValue" type="number" min="1"></div>
+            <div class="row input-row">
+                <div class="col">
+                    <div id="volumeIcon"><i class="fas fa-volume-up"></i></div>
+                    <div class="betText">Bet: <input id="betValue" type="number" min="1"></div>
+                </div>
+                <div class="col">
+                    <input id="spinButton" type="button" onclick="startSpinner()" value="Spin" class="align-center">
+                </div>
+                <div class="col">
+                    <div class="credits">Your Credits: <span id="creditAvail"></span></div>
+                </div>
             </div>
-            <div class="col">
-                <input id="spinButton" type="button" onclick="startSpinner()" value="Spin" class="align-center">
-            </div>
-            <div class="col">
-                <div class="credits">Your Credits: <span id="creditAvail"></span></div>
-            </div>
-        </div>
         </div>
     </body>
 </html>

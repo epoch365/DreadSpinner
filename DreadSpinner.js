@@ -251,9 +251,11 @@ function resultsReady () {
     }
     
     var winningCombos = winningCombosThree;
+    audioSpinning.pause();
     
     // Determine and display results
     var finalCombo = {"name": "Try Again", "multiplier": -1};
+    var win = false;
     for (var i in winningCombos) {
         var combo = winningCombos[i];
         var match = true;
@@ -266,6 +268,7 @@ function resultsReady () {
         
         if (match == true) {
             finalCombo = combo;
+            win = true;
             break;
         }
     }
@@ -273,6 +276,14 @@ function resultsReady () {
     $("#resultDiv").html(finalCombo.name);
     credits = credits + finalCombo.multiplier * bet;
     $("#creditAvail").html(credits);
+    setTimeout(function() {
+        if (win) {
+            audioWin.play();
+        }
+        else {
+            audioLose.play();
+        }
+    }, 100);
     if (credits < 0) {
         $("#creditAvail").css("color", "red");
     }
@@ -337,6 +348,9 @@ var credits = 150;
 var bet = 5;
 var imgSrc = "DreadSpinnerReverse.png";
 var done = false;
+var audioSpinning;
+var audioWin;
+var audioLose;
 
 // Document ready event
 $(document).ready(function () {
@@ -354,9 +368,29 @@ $(document).ready(function () {
         }
     });
     
+    // Initialize display state
     $("#creditAvail").html(credits);
     $("#betValue").val(bet);
     done = true;
+
+    // Initialize audio playback
+    audioSpinning = new Audio("AudioSpinning.mp3");
+    audioWin = new Audio("AudioWin.mp3");
+    audioLose = new Audio("AudioLose.mp3");
+    audioSpinning.loop = true;
+
+    $("#volumeIcon").css("cursor", "pointer");
+    $("#volumeIcon").click(function(){
+        audioSpinning.muted = !audioSpinning.muted;
+        audioWin.muted = !audioWin.muted;
+        audioLose.muted = !audioLose.muted;
+        if (audioSpinning.muted) {
+            $("#volumeIcon").html("<i class='fas fa-volume-off'></i>");
+        }
+        else {
+            $("#volumeIcon").html("<i class='fas fa-volume-up'></i>");
+        }
+    });
 });
 
 // Start the spinners
@@ -364,9 +398,20 @@ function startSpinner () {
     if (done == false) {
         return
     }
+
+    // Reset state
     done = false;
     $("#resultDiv").html("Welcome");
     bet = $("#betValue").val();
+    audioSpinning.pause();
+    audioSpinning.load();
+    audioWin.pause();
+    audioWin.load();
+    audioLose.pause();
+    audioLose.load();
+    setTimeout(function() {
+        audioSpinning.play();
+    }, 250);
     
     for (var ind in spinners) {
         (function () {
@@ -377,7 +422,7 @@ function startSpinner () {
             
             // Set delayed start to be 250ms + 500ms after previous spinner
             spinners[i].direction = "forward";
-            setTimeout(spinners[i].start, 250 + i * 500);
+            setTimeout(spinners[i].start, 250 + i * 0);
         }) ();
     }
 }

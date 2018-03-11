@@ -18,6 +18,8 @@ You can either download the repository and run it on your local machine in a web
 
 Or view the live but not always updated version at [dreadspinner.com](https://dreadspinner.com) (Why in the world am I actually paying to host this??).
 
+You can mute audio playback by clicking the little speaker button.
+
 The winning combos are:
 
 1. All three the same- 1x winnings (odds 1:9)
@@ -26,6 +28,10 @@ The winning combos are:
 
 (T.N. The original source is from a manga so right to left you degenerates)
 
+## Other Notes
+
+Audio created using [http://www.websynths.com](http://www.websynths.com) and the synth configuration provided in "soap.websynths-patch.json".
+
 ## FAQ
 
 - Q: Can I make my own version from this? A: Sure, why would I stop you.
@@ -33,4 +39,5 @@ The winning combos are:
 - Q: I have a suggestion? A: That's nice.
 - Q: The link's dead/something's not working. A: Ok, hopefully it'll get noticed and fixed.
 - Q: Fool! The whole thing is client side in JavaScript. I can modify the code for me to win! A: I have been bested. Congratulations hackerman on winning the internets.
+- Q: Are these actually frequently asked questions? A: Nope, I just came up with them myself.
 - Q: Why are am I still reading this? A: I don't know myself.
